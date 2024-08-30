@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Front-End</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .equal-height {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+      }
+      .card-body {
+        flex: 1;
+      }
+      .card {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+    <header id="header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Logo" style="height: 30px" />
+        </a>
+        <button
+          class="navbar-toggler "
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbars"
+          aria-controls="navbars"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbars">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Condomínios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Fórum</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Artigos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ferramentas</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cotar Imóvel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Planos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Entrar</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light"
+                href="#"
+                style="
+                  background-color: transparent;
+                  border-radius: 25px;
+                  padding: 5px 10px;
+                  border: 2px solid white;
+                  width: 150px;
+                "
+              >
+                CADASTRE-SE
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+      <div class="row">
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height h-100">
+          <div class="card">
+            <div class="card-body position-relative">
+              <span class="position-absolute span-show"> 1 </span>
+              <div class="d-flex align-items-center">
+                <div class="position-relative mr-3">
+                  <div
+                    class="position-relative d-flex justify-content-center align-items-center border border-dark rounded"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      overflow: hidden;
+                      background-color: transparent;
+                      border-width: 15px solid #000;
+                    "
+                  >
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 rounded"
+                      style="
+                        filter: blur(2px);
+                        overflow: hidden;
+                        transform: scale(1.1);
+                      "
+                    >
+                      <img
+                        src="img/corretora.jpg"
+                        alt="Imagem desfocada"
+                        class="w-100 h-100"
+                        style="object-fit: cover"
+                      />
+                    </div>
+                    <img
+                      src="img/corretora.jpg"
+                      alt="Imagem Principal"
+                      class="position-relative"
+                      style="z-index: 2; max-width: 100%; max-height: 100%"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h5 class="card-title">Nome Corretora</h5>
+                  <p class="card-text">3.000 pontos</p>
+                  <p
+                    class="text-primary"
+                    onclick="mostrarTelefone(this)"
+                    style="color: #fe6613 !important; cursor: pointer"
+                  >
+                    ver telefone
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mt-4">
+                <div class="position-relative mr-3">
+                  <div
+                    class="position-relative d-flex justify-content-center align-items-center border border-dark rounded"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      overflow: hidden;
+                      background-color: transparent;
+                      border-width: 15px solid #000;
+                    "
+                  >
+                    <div
+                      class="position-absolute top-0 start-0 w-100 h-100 rounded"
+                      style="
+                        filter: blur(2px);
+                        overflow: hidden;
+                        transform: scale(1.1);
+                      "
+                    >
+                      <img
+                        src="img/corretor.jpg"
+                        alt="Imagem desfocada"
+                        class="w-100 h-100"
+                        style="object-fit: cover"
+                      />
+                    </div>
+                    <img
+                      src="img/corretor.jpg"
+                      alt="Imagem Principal"
+                      class="position-relative"
+                      style="z-index: 2; max-width: 100%; max-height: 100%"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <h5 class="card-title">Nome Corretor</h5>
+                  <p class="card-text">1.260 pontos</p>
+                  <p
+                    class="text-primary"
+                    onclick="mostrarTelefone(this)"
+                    style="color: #fe6613 !important; cursor: pointer"
+                  >
+                    ver telefone
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height">
+          <div class="card">
+            <div class="card-body">
+              <span class="position-absolute span-show"> 2 </span>
+              <h4>Mande uma mensagem:</h4>
+              <form>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    id="cpf"
+                    class="form-control"
+                    oninput="applyCPFMask(this)"
+                    placeholder="Digite seu CPF:"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <input
+                    type="text"
+                    id="telefone"
+                    class="form-control"
+                    oninput="applyPhoneMask(this)"
+                    placeholder="Digite seu telefone:"
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <textarea
+                    id="assunto"
+                    class="form-control"
+                    rows="2"
+                    placeholder="Digite o assunto:"
+                  ></textarea>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  onclick="sendMessage()"
+                  style="background-color: #fe6613; color: white"
+                >
+                  Enviar Mensagem
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height">
+          <div class="card">
+            <div class="card-body position-relative">
+              <span class="position-absolute span-show"> 3 </span>
+              <h4 class="mb-3">Regra de 3</h4>
+              <br />
+              <div class="mb-3">
+                <div class="d-flex justify-content-center">
+                  <div class="">
+                    <div
+                      class="row mb-2"
+                      style="margin-top: 15px; justify-content: center"
+                    >
+                      <div class="col-md-5">
+                        <input
+                          type="number"
+                          id="value1"
+                          class="form-control"
+                          placeholder="60"
+                        />
+                      </div>
+                      <div
+                        class="col-md-2 d-flex align-items-center justify-content-center"
+                      >
+                        -
+                      </div>
+                      <div class="col-md-5">
+                        <input
+                          type="number"
+                          id="value2"
+                          class="form-control"
+                          placeholder="30"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="row mb-2"
+                      style="margin-top: 15px; justify-content: center"
+                    >
+                      <div class="col-md-5">
+                        <input
+                          type="number"
+                          id="value3"
+                          class="form-control"
+                          placeholder="100"
+                        />
+                      </div>
+                      <div
+                        class="col-md-2 d-flex align-items-center justify-content-center"
+                      >
+                        -
+                      </div>
+                      <div class="col-md-5">
+                        <input
+                          type="number"
+                          id="result"
+                          class="form-control"
+                          placeholder="Resultado:"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <button
+                type="button"
+                class="btn"
+                onclick="calculaRegraDeTres()"
+                style="background-color: #fe6613; color: white; float: left"
+              >
+                Calcular
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height">
+          <div class="card">
+            <div class="card-body p-0 position-relative">
+              <span class="position-absolute span-show"> 4 </span>
+              <div class="position-relative">
+                <img src="img/01.jpg" alt="imovel" class="img-fluid rounded" />
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn mt-3 d-block mx-auto w-100"
+            style="background-color: #fe6613; color: white"
+            onclick="openModal()"
+          >
+            ABRIR IMAGEM NO MODAL
+          </button>
+        </section>
+
+        <div class="modal" id="modal">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" onclick="closeModal()">
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <img
+                  src="img/01.jpg"
+                  alt="Imagem de Exemplo"
+                  id="modal-image"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height">
+          <div class="card">
+            <div class="download-section card-body p-0 position-relative">
+              <span class="position-absolute span-show"> 5 </span>
+              <div class="position-relative">
+                <img src="img/01.jpg" alt="imovel" class="img-fluid rounded" />
+                <div
+                  class="overlay-text position-absolute text-white p-2 w-75 rounded"
+                  style="
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #fe6613;
+                    color: white;
+                    text-align: center;
+                    opacity: 0.75;
+                  "
+                >
+                  Imovel Guide
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="button-download btn mt-3 d-block mx-auto w-"
+            style="background-color: #fe6613; color: white"
+            onclick="downloadImage()"
+          >
+            Download
+          </button>
+        </section>
+
+        <section class="col-lg-4 col-md-6 col-12 mb-4 equal-height">
+          <div class="card">
+            <span class="position-absolute span-show"> 6 </span>
+            <div class="zoom-out card-body p-0 position-relative">
+              <div class="position-relative">
+                <img
+                  src="img/01.jpg"
+                  alt="image zoomout"
+                  class="img-fluid rounded img-zoomout"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    </div>
+    <footer class="footer">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div>
+            <a href="#" class="text-white me-3">Termos</a>
+            <a href="#" class="text-white me-3">Contato</a>
+            <a href="#" class="text-white">Sobre</a>
+        </div>
+        <div class="d-flex align-items-center">
+            <p class="mb-0 me-3">&copy; Copyright 2022. Todos os direitos reservados.</p>
+            <img src="img/logo.png" alt="Logo" style="height: 30px;">
+        </div>
+    </div>
+    </footer>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
